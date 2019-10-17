@@ -34,26 +34,34 @@ public class ScavengeManager : MonoBehaviour
         TriesLeft = maxTries;
         displayText.text = "Click the button to scavenge";
         continueButton.gameObject.SetActive(false);
-        inventoryText.text = "Inventory:\n";
+        DisplayInventory();
     }
     public void StartScavenge()
     {
         var item = scav.Scavenge(lootTable);
-        if (--TriesLeft <= 0)
-        {
-            scavengeButton.interactable = false;
-            continueButton.gameObject.SetActive(true);
-            inventoryText.text += item.name;
-            displayText.text = "You found: " + item.name + " x1.\n You are out of energy!";
-        }
-        else if (item.name == TempItem.nothing)
+        if (item.partClass == Part.Class.None)
         {
             displayText.text = "You found: nothing. Better luck next time!";
         }
         else
         {
-            inventoryText.text += item.name + ", ";
-            displayText.text = "You found: " + item.name + " x1";
+            TempPlayer.instance.inventory.Add(item);
+            DisplayInventory();
+            displayText.text = "You found: " + item.DisplayName + " x1";
         }
+        if (--TriesLeft <= 0)
+        {
+            scavengeButton.interactable = false;
+            continueButton.gameObject.SetActive(true);         
+            displayText.text += "\n You are out of energy!";
+        }
+    }
+
+    private void DisplayInventory()
+    {
+        string invStr = "Inventory:\n";
+        foreach (var item in TempPlayer.instance.inventory)
+            invStr += item.DisplayName + ", ";     
+        inventoryText.text = invStr.TrimEnd(' ', ',');
     }
 }

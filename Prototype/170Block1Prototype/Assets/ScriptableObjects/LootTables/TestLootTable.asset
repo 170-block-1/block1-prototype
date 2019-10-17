@@ -17,40 +17,20 @@ MonoBehaviour:
   - 3
   - 1
   itemsCommon:
-  - name: Cappy Robot Head
-  - name: Maladjusted AI core
-  - name: Rusty Claw Arm
-  - name: Cruddy Treads
-  - name: Creaky Axel
-  - name: Nothing
+  - {fileID: 11400000, guid: 56fd1678ea2e7ec40b153a9183bcdc93, type: 2}
+  - {fileID: 11400000, guid: 8499f1fb80179d849bde042149e756fb, type: 2}
+  - {fileID: 11400000, guid: cbfb8979d8e0d694cbbc112eaf2568aa, type: 2}
+  - {fileID: 11400000, guid: 4ce9a8dde1534e54f8d9e1dd5a17725e, type: 2}
   itemsCommonWeights:
   - 1
   - 1
-  - 1
   - 2
-  - 2
-  - 4
+  - 3
   itemsUncommon:
-  - name: Robot Head
-  - name: AI Core
-  - name: Claw Arm
-  - name: Treads
-  - name: Axel
+  - {fileID: 11400000, guid: 3ae3c52326db6074a8d1b7fccc06aed1, type: 2}
   itemsUncommonWeights:
   - 1
-  - 1
-  - 1
-  - 1
-  - 2
   itemsRare:
-  - name: Brainy Crainium
-  - name: Self-Aware AI core
-  - name: Grabby Hand
-  - name: Multi-Track Drifting Wheels
-  - name: Axel from Kingdom Hearts
+  - {fileID: 11400000, guid: 478fce31531689d4990f171a88d14c8b, type: 2}
   itemsRareWeights:
-  - 10
-  - 10
-  - 10
-  - 10
   - 1
