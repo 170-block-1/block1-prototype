@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1386858338193061193}
-  - component: {fileID: 1386858338193061194}
+  - component: {fileID: 6786776528857784133}
   m_Layer: 0
   m_Name: PlayerObj
   m_TagString: Untagged
@@ -25,13 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386858338193061195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 354.45255, y: 861.103, z: -750.375}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1386858338193061194
+--- !u!114 &6786776528857784133
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,7 +40,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1386858338193061195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5448a4afb442fee488d9d88d1ee8d8c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c2893f52d2d43544b3ce4bcf7599f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 5
+  day: 1
+  maxAp: 5
+  ap: 5
+  overTime: 2
+  maxOverTime: 2
+  inventory: []

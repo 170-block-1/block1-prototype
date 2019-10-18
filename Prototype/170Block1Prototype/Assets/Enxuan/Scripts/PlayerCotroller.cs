@@ -6,62 +6,57 @@ using UnityEngine.UI;
 
 public class PlayerCotroller : MonoBehaviour
 {
-    public PlayerUI player;
     public Text dayText;
     public Text apText;
     private bool overTimeFlag = false;
+
     void Start()
     {
-        player.day = 1;
-        player.maxAp = 5;
-        player.ap = player.maxAp;
-        player.maxOverTime = 2;
-        player.overTime = player.maxOverTime;
         updatePanel();
     }
     public void BuildButton() 
     {
-        if(player.overTime >= 2) 
+        if(Player.instance.overTime >= 2) 
         {
-            if(player.ap > 0) 
+            if(Player.instance.ap > 0) 
             {
                 if(overTimeFlag == false)
                 {
-                    --player.ap;
+                    --Player.instance.ap;
                 }
                 else 
                 {
-                    player.ap -= 2;
+                    Player.instance.ap -= 2;
                 }
             }
             else 
             {
-                --player.overTime;
+                --Player.instance.overTime;
             }
         }
         updatePanel();
     }
     public void SleepButton()
     {
-        if(player.overTime < 2) {
+        if(Player.instance.overTime < 2) {
             overTimeFlag = true;
         }
-        ++player.day;
-        player.ap = player.maxAp;
-        player.overTime = player.maxOverTime;
+        ++Player.instance.day;
+        Player.instance.ap = Player.instance.maxAp;
+        Player.instance.overTime = Player.instance.maxOverTime;
         updatePanel();
     }
     public void ScavengButton() 
     {
-        if(player.overTime >= 2) 
+        if(Player.instance.overTime >= 2) 
         {
-            if(player.ap > 0) 
+            if(Player.instance.ap > 0) 
             {
-                player.ap -= 2;
+                Player.instance.ap -= 2;
             }
             else 
             {
-                player.overTime -= 2;
+                Player.instance.overTime -= 2;
             }
         }
         updatePanel();
@@ -71,10 +66,10 @@ public class PlayerCotroller : MonoBehaviour
 
     }
     public void updatePanel() {
-        dayText.text = "Day: " + player.day;
-        if(player.ap >= 0) 
+        dayText.text = "Day: " + Player.instance.day;
+        if(Player.instance.ap >= 0) 
         {
-            apText.text = "AP: " + player.ap;
+            apText.text = "AP: " + Player.instance.ap;
         }
         else
         {

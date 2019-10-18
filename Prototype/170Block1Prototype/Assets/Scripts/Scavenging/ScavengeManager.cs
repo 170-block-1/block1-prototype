@@ -45,7 +45,7 @@ public class ScavengeManager : MonoBehaviour
         }
         else
         {
-            TempPlayer.instance.inventory.Add(item);
+            Player.instance.inventory.Add(item);
             DisplayInventory();
             displayText.text = "You found: " + item.DisplayName + " x1";
         }
@@ -60,7 +60,7 @@ public class ScavengeManager : MonoBehaviour
     private void DisplayInventory()
     {
         string invStr = "Inventory:\n";
-        foreach (var item in TempPlayer.instance.inventory)
+        foreach (var item in Player.instance.inventory)
             invStr += item.DisplayName + ", ";     
         inventoryText.text = invStr.TrimEnd(' ', ',');
     }
