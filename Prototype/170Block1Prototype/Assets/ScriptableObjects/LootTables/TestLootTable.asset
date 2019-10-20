@@ -35,6 +35,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7f6bb3d3f58afd0448baffdd8c7c2078, type: 2}
   itemsUncommonWeights:
   - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
   itemsRare:
   - {fileID: 11400000, guid: cbfb8979d8e0d694cbbc112eaf2568aa, type: 2}
   itemsRareWeights:
