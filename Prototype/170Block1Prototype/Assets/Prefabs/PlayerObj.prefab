@@ -46,6 +46,7 @@ MonoBehaviour:
   day: 1
   maxAp: 5
   ap: 5
-  overTime: 2
-  maxOverTime: 2
+  overTime: 0
+  buildCost: 1
+  scavengCost: 2
   inventory: []

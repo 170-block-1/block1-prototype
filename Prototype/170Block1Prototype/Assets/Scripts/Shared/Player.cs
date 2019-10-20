@@ -9,8 +9,9 @@ public class Player : MonoBehaviour
     public int day;
     public int maxAp;
     public int ap;
-    public int overTime;
-    public int maxOverTime;
+    public bool overTime;
+    public int buildCost;
+    public int scavengCost;
     public List<Part> inventory;
 
     private void Awake()
@@ -24,6 +25,16 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void toString()
+    {
+        Debug.Log("Day: " + day);
+        Debug.Log("Max AP: " + maxAp);
+        Debug.Log("AP: " + ap);
+        Debug.Log("Overtime: " + overTime);
+        Debug.Log("Build Cost: " + buildCost);
+        Debug.Log("Scaveng Cost: " + scavengCost);
     }
 
 }
