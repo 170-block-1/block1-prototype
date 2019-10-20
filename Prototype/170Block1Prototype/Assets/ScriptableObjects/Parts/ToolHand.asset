@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c212648338482484394fea4f61fcfa97, type: 3}
-  m_Name: AIPassionate
+  m_Name: ToolHand
   m_EditorClassIdentifier: 
-  displayName: Passionate AI core
-  description: 
-  itemGraphic: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  displayName: Hand
+  description: Mechanical hands capable of intricate manipulation of objects.
+  itemGraphic: {fileID: 0}
   partClass: 1
   attributes:
-  - Passionate
-  - Unreliable
+  - articulate
+  - force exertion
+  - grip
