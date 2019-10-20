@@ -14,22 +14,22 @@ public class PlayerCotroller : MonoBehaviour
     {
         updatePanel();
     }
-    public void BuildButton() 
+    public void BuildButton()
     {
-        if(Player.instance.overTime >= 2) 
+        if(Player.instance.overTime >= 2)
         {
-            if(Player.instance.ap > 0) 
+            if(Player.instance.ap > 0)
             {
                 if(overTimeFlag == false)
                 {
                     --Player.instance.ap;
                 }
-                else 
+                else
                 {
                     Player.instance.ap -= 2;
                 }
             }
-            else 
+            else
             {
                 --Player.instance.overTime;
             }
@@ -46,15 +46,15 @@ public class PlayerCotroller : MonoBehaviour
         Player.instance.overTime = Player.instance.maxOverTime;
         updatePanel();
     }
-    public void ScavengButton() 
+    public void ScavengButton()
     {
-        if(Player.instance.overTime >= 2) 
+        if(Player.instance.overTime >= 2)
         {
-            if(Player.instance.ap > 0) 
+            if(Player.instance.ap > 0)
             {
                 Player.instance.ap -= 2;
             }
-            else 
+            else
             {
                 Player.instance.overTime -= 2;
             }
@@ -67,7 +67,7 @@ public class PlayerCotroller : MonoBehaviour
     }
     public void updatePanel() {
         dayText.text = "Day: " + Player.instance.day;
-        if(Player.instance.ap >= 0) 
+        if(Player.instance.ap >= 0)
         {
             apText.text = "AP: " + Player.instance.ap;
         }
