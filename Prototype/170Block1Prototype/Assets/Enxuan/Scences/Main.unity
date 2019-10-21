@@ -207,12 +207,12 @@ PrefabInstance:
     - target: {fileID: 3517673283121801589, guid: a884b9931a52a664d8d770b5a8277154,
         type: 3}
       propertyPath: m_Name
-      value: Inventory Canvas
+      value: InventoryCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 3517673283121801589, guid: a884b9931a52a664d8d770b5a8277154,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3517673283121801588, guid: a884b9931a52a664d8d770b5a8277154,
         type: 3}
@@ -318,6 +318,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3517673282411482312, guid: a884b9931a52a664d8d770b5a8277154,
+        type: 3}
+      propertyPath: m_Name
+      value: CloseInventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 3517673283154018147, guid: a884b9931a52a664d8d770b5a8277154,
+        type: 3}
+      propertyPath: m_Name
+      value: OpenInventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 3517673284132340786, guid: a884b9931a52a664d8d770b5a8277154,
+        type: 3}
+      propertyPath: m_Name
+      value: DisplayInvManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a884b9931a52a664d8d770b5a8277154, type: 3}
