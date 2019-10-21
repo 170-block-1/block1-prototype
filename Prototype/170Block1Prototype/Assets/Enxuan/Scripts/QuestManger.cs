@@ -13,18 +13,37 @@ public class QuestManger : MonoBehaviour
     public Text discription;
 
     public Text fullDiscription;
+
+    private Quest currentQuest;
+
+    private Queue<Quest> questList;
     void Start()
     {
-        if(quests.Length > 0) {
-            questName.text = quests[0].name;
-            discription.text = quests[0].discription;
-            fullDiscription.text = quests[0].fullDiscription;
+        questList = new Queue<Quest>();
+
+        foreach(Quest q in quests) {
+            questList.Enqueue(q);
+        }
+        if(questList.Count > 0) {
+            currentQuest = questList.Dequeue();
+            updateQuestInfo();
         }
     }
 
     // Update is called once per frame
-    void Update()
+    public void QuestComplete() {
+        if(questList.Count > 0) {
+            if(currentQuest.completed){
+                currentQuest = questList.Dequeue();
+            }
+        }
+        updateQuestInfo();
+    }
+
+    private void updateQuestInfo() 
     {
-        
+        questName.text = currentQuest.name;
+        discription.text = currentQuest.discription;
+        fullDiscription.text = currentQuest.fullDiscription;
     }
 }
