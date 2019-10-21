@@ -14,7 +14,7 @@ public class PlayerCotroller : MonoBehaviour
     }
     public void BuildButton()
     {
-        if(!Player.instance.overTime && Player.instance.buildCost <= Player.instance.maxAp)
+        if(!Player.instance.overTime && Player.instance.buildCost <= Player.instance.maxAp + 2)
         {
             if(Player.instance.ap >= Player.instance.buildCost)
             {
@@ -45,7 +45,7 @@ public class PlayerCotroller : MonoBehaviour
     }
     public void ScavengButton()
     {
-        if(!Player.instance.overTime && Player.instance.scavengCost <= Player.instance.maxAp)
+        if(!Player.instance.overTime && Player.instance.scavengCost <= Player.instance.maxAp + 2)
         {
             if(Player.instance.ap >= Player.instance.scavengCost)
             {
