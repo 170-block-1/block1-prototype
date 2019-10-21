@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     public int scavengCost;
     public List<Part> inventory;
 
+    public Quest currentQuest = null;
+
     private void Awake()
     {
         if(instance == null)
