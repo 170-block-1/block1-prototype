@@ -11,6 +11,8 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
     public Animator animator;
+    public Dialogue dialogue;
+
 
     private Queue<string> sentences;
 
@@ -19,6 +21,7 @@ public class DialogueManager : MonoBehaviour
     {
         sentences = new Queue<string>();
         animator.SetBool("IsOpen", true);
+        StartDialogue(dialogue);
     }
 
     // Starts the dialogue and displays next sentence

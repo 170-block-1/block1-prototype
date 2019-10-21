@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c88a45275b73a40b884f8db41b1f8f, type: 3}
+  m_Name: TestLootTable
+  m_EditorClassIdentifier: 
+  rarityWeighting:
+  - 5
+  - 3
+  - 1
+  itemsCommon:
+  - {fileID: 11400000, guid: 56fd1678ea2e7ec40b153a9183bcdc93, type: 2}
+  - {fileID: 11400000, guid: 8499f1fb80179d849bde042149e756fb, type: 2}
+  - {fileID: 11400000, guid: cbfb8979d8e0d694cbbc112eaf2568aa, type: 2}
+  - {fileID: 11400000, guid: 4ce9a8dde1534e54f8d9e1dd5a17725e, type: 2}
+  itemsCommonWeights:
+  - 1
+  - 1
+  - 2
+  - 3
+  itemsUncommon:
+  - {fileID: 11400000, guid: 3ae3c52326db6074a8d1b7fccc06aed1, type: 2}
+  itemsUncommonWeights:
+  - 1
+  itemsRare:
+  - {fileID: 11400000, guid: 478fce31531689d4990f171a88d14c8b, type: 2}
+  itemsRareWeights:
+  - 1
