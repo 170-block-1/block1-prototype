@@ -590,7 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1981add8f9e103144a54830d761166f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTries: 5
+  maxTries: 2
   lootTable: {fileID: 11400000, guid: 7bb90991cd5d99f4cb9ab37530610f7b, type: 2}
   scavengeButton: {fileID: 1609360249}
   continueButton: {fileID: 609277124}

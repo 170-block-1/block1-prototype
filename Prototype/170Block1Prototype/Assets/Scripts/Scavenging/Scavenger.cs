@@ -39,6 +39,8 @@ public class Scavenger : MonoBehaviour
             default:
                 return null;
         }
+        //// Make parts you already have less likely
+        //drops.ApplyMetric((p) => Player.instance.inventory.Contains(p) ? 0 : 1);
         // Return a random sample from the drops table
         return RandomU.instance.Choice(drops);
     }

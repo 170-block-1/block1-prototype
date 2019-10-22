@@ -8,8 +8,12 @@ public class Part : ScriptableObject
     public enum Class
     {
         None,
-        AICore,
-        Element,     
+        Tool,
+        Core,
+        Sensor,
+        Internal,
+        Locomotion,
+        Chamber,
     }
 
     public string DisplayName => string.IsNullOrWhiteSpace(displayName) ? name : displayName;

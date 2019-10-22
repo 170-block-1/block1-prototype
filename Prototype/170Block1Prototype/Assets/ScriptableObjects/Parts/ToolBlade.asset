@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c212648338482484394fea4f61fcfa97, type: 3}
-  m_Name: AIAngry
+  m_Name: ToolBlade
   m_EditorClassIdentifier: 
-  displayName: 
-  description: 
+  displayName: Blade
+  description: A sturdy blade capable of cutting many materials.
   itemGraphic: {fileID: 0}
   partClass: 1
-  attributes: []
+  attributes:
+  - sharp
+  - dangerous
