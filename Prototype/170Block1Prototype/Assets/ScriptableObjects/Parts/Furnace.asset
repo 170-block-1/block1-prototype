@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c212648338482484394fea4f61fcfa97, type: 3}
-  m_Name: InteralStorageCompartment
-  m_EditorClassIdentifier:
-  displayName: Storage Compartment
-  description: An empty cavity waiting to be filled.
-  itemGraphic: {fileID: 0}
-  partClass: 4
+  m_Name: Furnace
+  m_EditorClassIdentifier: 
+  displayName: Furnace
+  description: 
+  itemGraphic: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  partClass: 2
   attributes:
-  - storage
+  - Fire

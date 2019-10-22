@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c212648338482484394fea4f61fcfa97, type: 3}
-  m_Name: InteralStorageCompartment
-  m_EditorClassIdentifier:
-  displayName: Storage Compartment
-  description: An empty cavity waiting to be filled.
+  m_Name: AIAngry
+  m_EditorClassIdentifier: 
+  displayName: 
+  description: 
   itemGraphic: {fileID: 0}
-  partClass: 4
-  attributes:
-  - storage
+  partClass: 1
+  attributes: []
