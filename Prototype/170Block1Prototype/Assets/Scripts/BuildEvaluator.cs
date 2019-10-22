@@ -16,11 +16,11 @@ public class BuildEvaluator : MonoBehaviour
         }
     }
 
-    private bool EvaluateFirstQuest(List<Part> parts, out int bonus)
-    { 
-        // sucess: have a tool (failure otherwise)
-        // having more than one tool gives a bonus
-        // 
-    }
+    //private bool EvaluateFirstQuest(List<Part> parts, out int bonus)
+    //{ 
+    //    // sucess: have a tool (failure otherwise)
+    //    // having more than one tool gives a bonus
+    //    // 
+    //}
 
 }
