@@ -7,13 +7,14 @@ public class InventoryDisplay : MonoBehaviour
 {
     public Text displayText;
 
-    // also display description
     public void displayInv() {
         displayText.text = "Inventory:";
+
         foreach (var item in Player.instance.inventory)
         {
+            displayText.text = displayText.text + "\n" + item.DisplayName + ": " + item.description;
             Debug.Log(item.DisplayName + ": " + item.description);
-            displayText.text = displayText.text + "\n" + item.DisplayName;
         } 
+        
     }
 }

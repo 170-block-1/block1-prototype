@@ -13,24 +13,34 @@ MonoBehaviour:
   m_Name: TestLootTable
   m_EditorClassIdentifier: 
   rarityWeighting:
-  - 5
+  - 6
   - 3
   - 1
   itemsCommon:
-  - {fileID: 11400000, guid: 56fd1678ea2e7ec40b153a9183bcdc93, type: 2}
-  - {fileID: 11400000, guid: 8499f1fb80179d849bde042149e756fb, type: 2}
-  - {fileID: 11400000, guid: cbfb8979d8e0d694cbbc112eaf2568aa, type: 2}
+  - {fileID: 11400000, guid: 1d034eb3f2b48a2478d2c837f1931c12, type: 2}
+  - {fileID: 11400000, guid: 995c77f91d0602041a39f5431bdecc72, type: 2}
+  - {fileID: 11400000, guid: d850809b1228d18419f5581e74576ec9, type: 2}
   - {fileID: 11400000, guid: 4ce9a8dde1534e54f8d9e1dd5a17725e, type: 2}
   itemsCommonWeights:
   - 1
   - 1
-  - 2
-  - 3
+  - 1
+  - 1
   itemsUncommon:
-  - {fileID: 11400000, guid: 3ae3c52326db6074a8d1b7fccc06aed1, type: 2}
+  - {fileID: 11400000, guid: fd77974910c544d4c8b178dbcfcb687d, type: 2}
+  - {fileID: 11400000, guid: d73110afe7fef2143bfa575aeb7c04e9, type: 2}
+  - {fileID: 11400000, guid: 43f66704bc389c644a9591c33488fc7b, type: 2}
+  - {fileID: 11400000, guid: 900ce5b203593cc4098ef2300a74c91a, type: 2}
+  - {fileID: 11400000, guid: 52a74ab31f90c444d986d503291c5b0a, type: 2}
+  - {fileID: 11400000, guid: 7f6bb3d3f58afd0448baffdd8c7c2078, type: 2}
   itemsUncommonWeights:
   - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
   itemsRare:
-  - {fileID: 11400000, guid: 478fce31531689d4990f171a88d14c8b, type: 2}
+  - {fileID: 11400000, guid: cbfb8979d8e0d694cbbc112eaf2568aa, type: 2}
   itemsRareWeights:
   - 1
