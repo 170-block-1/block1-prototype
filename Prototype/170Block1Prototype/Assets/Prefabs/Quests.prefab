@@ -731,10 +731,6 @@ MonoBehaviour:
       I''ll need to design a robot that can not only provide for a young child''s
       needs, but also keep it comfortable. I need to avoid putting any dangerous parts
       in the robot that could harm the child.'
-  - completed: 0
-    name: Third Quest
-    discription: This is third quest
-    fullDiscription: This is full story of third Quest
   questName: {fileID: 3050614936945955710}
   discription: {fileID: 3050614936717392533}
   fullDiscription: {fileID: 3050614936040436911}
