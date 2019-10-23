@@ -49,4 +49,13 @@ MonoBehaviour:
   overTime: 0
   buildCost: 1
   scavengCost: 2
-  inventory: []
+  inventory:
+  - {fileID: 11400000, guid: 4cb883ee044044f4baf9ccecc38ace5a, type: 2}
+  - {fileID: 11400000, guid: 8499f1fb80179d849bde042149e756fb, type: 2}
+  - {fileID: 11400000, guid: 56fd1678ea2e7ec40b153a9183bcdc93, type: 2}
+  - {fileID: 11400000, guid: 7f6bb3d3f58afd0448baffdd8c7c2078, type: 2}
+  currentQuest:
+    completed: 0
+    name: 
+    discription: 
+    fullDiscription: 
