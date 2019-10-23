@@ -8,7 +8,7 @@ public class Quest {
     public bool completed = false;
 
     public string name;
-    
+
     [TextArea(2,10)]
     public string discription;
 

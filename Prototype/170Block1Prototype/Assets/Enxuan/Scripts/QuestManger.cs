@@ -41,9 +41,9 @@ public class QuestManger : MonoBehaviour
         }
     }
 
-    void Start() 
+    void Start()
     {
-        if(questList.Count > 0) 
+        if(questList.Count > 0)
         {
             Player.instance.currentQuest = questList.Dequeue();
             updateQuestInfo();
@@ -60,7 +60,7 @@ public class QuestManger : MonoBehaviour
         updateQuestInfo();
     }
 
-    private void updateQuestInfo() 
+    private void updateQuestInfo()
     {
         questName.text = Player.instance.currentQuest.name;
         discription.text = Player.instance.currentQuest.discription;

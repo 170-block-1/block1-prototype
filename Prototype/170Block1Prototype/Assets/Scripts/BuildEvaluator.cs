@@ -21,7 +21,7 @@ public class BuildEvaluator : MonoBehaviour
                 success = EvaluateSecondQuest(parts, out bonus, out d);
                 manager.StartDialogue(d);
                 break;
-        }     
+        }
     }
 
     private bool EvaluateFirstQuest(List<Part> parts, out int bonus, out Dialogue dialog)
@@ -31,13 +31,13 @@ public class BuildEvaluator : MonoBehaviour
 
         // Fail if you don't have a tool
         if(!parts.Any((p) => p.partClass == Part.Class.Tool))
-        {          
+        {
             sentences.Add("Your robot was a failure!");
             sentences.Add("Try adding a tool!");
             dialog = new Dialogue() { sentences = sentences.ToArray() };
             return false;
         }
-        
+
         sentences.Add("success");
         // Bonus and mesaage for having a monitor
         if(parts.Any((p) => p.DisplayName.ToLower() == "monitor"))
@@ -58,8 +58,8 @@ public class BuildEvaluator : MonoBehaviour
             sentences.Add("Bonus: has treads");
         }
         sentences.Add("Your bonus was: " + bonus);
-        dialog = new Dialogue() { sentences = sentences.ToArray() };      
-        return true;        
+        dialog = new Dialogue() { sentences = sentences.ToArray() };
+        return true;
     }
 
     private bool EvaluateSecondQuest(List<Part> parts, out int bonus, out Dialogue dialog)
