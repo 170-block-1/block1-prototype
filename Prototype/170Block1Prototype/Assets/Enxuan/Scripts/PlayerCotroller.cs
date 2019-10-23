@@ -26,6 +26,7 @@ public class PlayerCotroller : MonoBehaviour
             }
         }
         updatePanel();
+        SceneManager.LoadScene(2);
     }
     public void SleepButton()
     {
