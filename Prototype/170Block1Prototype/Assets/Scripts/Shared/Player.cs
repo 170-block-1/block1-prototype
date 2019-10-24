@@ -29,6 +29,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
+    }
+
     public void toString()
     {
         Debug.Log("Day: " + day);
