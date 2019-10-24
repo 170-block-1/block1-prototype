@@ -43,32 +43,33 @@ public class BuildEvaluator : MonoBehaviour
         // Fail if you don't have a tool
         if(!parts.Any((p) => p.partClass == Part.Class.Tool))
         {
-            sentences.Add("Your robot was a failure!");
-            sentences.Add("Try adding a tool!");
+            sentences.Add("When I said I wanted a robot that could break down wood, I didn’t think you’d try to give me... that.");
             dialog = new Dialogue() { sentences = sentences.ToArray() };
             return false;
         }
 
-        sentences.Add("success");
+        sentences.Add("Yeah, your robot did a pretty good job of it!");
         // Bonus and mesaage for having a monitor
         if(parts.Any((p) => p.DisplayName.ToLower() == "monitor"))
         {
             ++bonus;
-            sentences.Add("Bonus: has monitor");
+            sentences.Add("It made some of the cleanest cuts I’ve ever seen.");
         }
         // Bonus and mesaage for having storage
         if (parts.Any((p) => p.DisplayName.ToLower() == "storage compartment"))
         {
             ++bonus;
-            sentences.Add("Bonus: has storage");
+            sentences.Add("It was pretty helpful for holding the wood, too.");
         }
         // Bonus and mesaage for having treads
         if (parts.Any((p) => p.DisplayName.ToLower() == "rotary treads"))
         {
             ++bonus;
-            sentences.Add("Bonus: has treads");
+            sentences.Add("And it was pretty handy at carrying around the logs!");
         }
         sentences.Add("Your bonus was: " + bonus);
+        sentences.Add("You got a new quest: Build-A-Nanny!");
+        sentences.Add("Check your quest description for details.");
         dialog = new Dialogue() { sentences = sentences.ToArray() };
         return true;
     }
@@ -78,15 +79,6 @@ public class BuildEvaluator : MonoBehaviour
         bonus = 0;
         var sentences = new List<string>();
 
-        // Fail if you don't have a hand
-        if (!parts.Any((p) => p.DisplayName.ToLower() == "hand"))
-        {
-            sentences.Add("Your robot was a failure!");
-            sentences.Add("Try adding something to hold objects!");
-            dialog = new Dialogue() { sentences = sentences.ToArray() };
-            return false;
-        }
-
         int satisfaction = 0;
 
         #region Specific Part stuff
@@ -95,11 +87,12 @@ public class BuildEvaluator : MonoBehaviour
         if (parts.Any((p) => p.DisplayName.ToLower() == "rotary treads"))
         {
             satisfaction += 2;
-            sentences.Add("Your robot benefits greatly from its treads' mobility!");
+            sentences.Add("She’s sleeping soundly now, thanks to that robot.");
+            sentences.Add("It worked marvelously!");            
         }
         else
         {
-            sentences.Add("Your robot suffers greatly from its lack of mobility!");
+            sentences.Add("She seemed a bit cranky, but overall I think your robot did a good enough job.");
         }
         // Monitor bonus / penalty
         if(parts.Any((p) => p.DisplayName.ToLower() == "monitor"))
@@ -109,66 +102,83 @@ public class BuildEvaluator : MonoBehaviour
         }
         else
         {
-            sentences.Add("Your robot suffers from its lack of vision!");
+            sentences.Add("She knocked over some stuff nearby though.");
+            sentences.Add("Is there any way you could have allowed the robot to keep an eye on her?");
         }
 
         // Compassion core bonus / penalty
         if (parts.Any((p) => p.DisplayName.ToLower() == "compassion core"))
         {
             satisfaction += 1;
-            sentences.Add("Your robot benefits from its compassion!");
         }
         else
         {
-            sentences.Add("Your robot suffers from its lack of compassion!");
+            sentences.Add("She seemed a bit distressed.");
+            sentences.Add("I guess it is impossible for robots to fully replace humans in some regards.");
         }
 
         // Thermos bonus / penalty
         if (parts.Any((p) => p.DisplayName.ToLower() == "thermos"))
         {
             satisfaction += 1;
-            sentences.Add("Your robot benefits from its temperature control components!");
         }
         else
         {
-            sentences.Add("Your robot suffers from its lack of temperature control components!");
+            sentences.Add("It seemed like she didn’t eat much food.");
+            sentences.Add("I guess it’d be hard to teach a robot to cook, huh?");
         }
 
         // Vital Scope bonus / penalty
         if (parts.Any((p) => p.DisplayName.ToLower() == "vital scope"))
         {
             satisfaction += 1;
-            sentences.Add("Your robot benefits greatly from its ability to check vitals!");
         }
         else
         {
-            sentences.Add("Your robot suffers from its lack of ability to check vitals!");
+            sentences.Add("This might just be me being paranoid, but it would also take a load off my shoulders if the robot could make sure she’s alright.");
         }
 
         // storage core bonus / penalty
         if (parts.Any((p) => p.DisplayName.ToLower() == "storage compartment"))
         {
             satisfaction += 1;
-            sentences.Add("Your robot benefits from its expanded storage!");
         }
         else
         {
-            sentences.Add("Your robot suffers from its lack of storage!");
+            sentences.Add("The robot was still doing some stuff when I got back.");
+            sentences.Add("Maybe it should have some way to hold more than one or two things at a time?");
         }
 
         #endregion
 
-        if (satisfaction < 4)
+        // Fail if you don't have a hand
+        if (!parts.Any((p) => p.DisplayName.ToLower() == "hand"))
+        {
+            sentences.Clear();
+            if (satisfaction < 4)
+            {
+                sentences.Add("Is this some kind of joke?");
+                sentences.Add("We’re talking about a human child here, not some piece of modern art!");
+            }
+            else
+            { 
+                sentences.Add("This wouldn’t be alright for taking care of a pet rock, let alone a human child!");
+                sentences.Add("The robot needs something to pick up objects with!");               
+            }
+            dialog = new Dialogue() { sentences = sentences.ToArray() };
+            return false;
+        }
+        else if (satisfaction < 4)
         {
             bonus = 0;
-            sentences.Add("Your robot was a failure!");
-            sentences.Add("Your satisfaction wasn't high enough!");
+            sentences.Clear();
+            sentences.Add("I let the robot look after her for a few hours, but I didn’t like what I saw.");
+            sentences.Add("I’m sorry, but I can’t pay you for this.");
             dialog = new Dialogue() { sentences = sentences.ToArray() };
             return false;
         }
 
         bonus = satisfaction - 4;
-        sentences.Add("Success!");
         sentences.Add("Your bonus was: " + bonus);
         dialog = new Dialogue() { sentences = sentences.ToArray() };
         return true;

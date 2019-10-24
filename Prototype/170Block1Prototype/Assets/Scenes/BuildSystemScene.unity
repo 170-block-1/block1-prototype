@@ -190,7 +190,7 @@ PrefabInstance:
     - target: {fileID: 6786776528857784133, guid: 1446887e816c2fc4696b2c68967e1d3e,
         type: 3}
       propertyPath: inventory.Array.size
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6786776528857784133, guid: 1446887e816c2fc4696b2c68967e1d3e,
         type: 3}
@@ -214,13 +214,13 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 7f6bb3d3f58afd0448baffdd8c7c2078,
+      objectReference: {fileID: 11400000, guid: 43f66704bc389c644a9591c33488fc7b,
         type: 2}
     - target: {fileID: 6786776528857784133, guid: 1446887e816c2fc4696b2c68967e1d3e,
         type: 3}
       propertyPath: inventory.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 478fce31531689d4990f171a88d14c8b,
+      objectReference: {fileID: 11400000, guid: 900ce5b203593cc4098ef2300a74c91a,
         type: 2}
     - target: {fileID: 6786776528857784133, guid: 1446887e816c2fc4696b2c68967e1d3e,
         type: 3}
@@ -232,25 +232,25 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: 1d034eb3f2b48a2478d2c837f1931c12,
+      objectReference: {fileID: 11400000, guid: 7f6bb3d3f58afd0448baffdd8c7c2078,
         type: 2}
     - target: {fileID: 6786776528857784133, guid: 1446887e816c2fc4696b2c68967e1d3e,
         type: 3}
       propertyPath: inventory.Array.data[7]
       value: 
-      objectReference: {fileID: 11400000, guid: d850809b1228d18419f5581e74576ec9,
+      objectReference: {fileID: 11400000, guid: 1d034eb3f2b48a2478d2c837f1931c12,
         type: 2}
     - target: {fileID: 6786776528857784133, guid: 1446887e816c2fc4696b2c68967e1d3e,
         type: 3}
       propertyPath: inventory.Array.data[8]
       value: 
-      objectReference: {fileID: 11400000, guid: 900ce5b203593cc4098ef2300a74c91a,
+      objectReference: {fileID: 11400000, guid: 995c77f91d0602041a39f5431bdecc72,
         type: 2}
     - target: {fileID: 6786776528857784133, guid: 1446887e816c2fc4696b2c68967e1d3e,
         type: 3}
       propertyPath: inventory.Array.data[9]
       value: 
-      objectReference: {fileID: 11400000, guid: fd77974910c544d4c8b178dbcfcb687d,
+      objectReference: {fileID: 11400000, guid: d850809b1228d18419f5581e74576ec9,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1446887e816c2fc4696b2c68967e1d3e, type: 3}
