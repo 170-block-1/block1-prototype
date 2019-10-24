@@ -51,8 +51,10 @@ public class BuildSystem : MonoBehaviour {
         foreach(var part in AddPart)
         {
             Player.instance.inventory.Remove(part);
-            SceneManager.LoadScene(0);
         }
+        AddPart.Clear();
+        foreach (var child in MiddleItemHolder.transform.GetComponentsInChildren<Transform>())
+            Destroy(child.gameObject);
     }
 
     public void Scrap()
@@ -60,11 +62,4 @@ public class BuildSystem : MonoBehaviour {
         SceneManager.LoadScene(0);
     }
 
-
-
-        // Update is called once per frame
-        void Update()
-    {
-     
-    }
 }

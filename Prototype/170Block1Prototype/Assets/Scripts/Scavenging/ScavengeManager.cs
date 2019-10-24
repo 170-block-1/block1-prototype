@@ -13,11 +13,12 @@ public class ScavengeManager : MonoBehaviour
     public Button scavengeButton;
     public Button continueButton;
     [Header("Display Text References")]
-    public Text displayText;
     public Text energyText;
     public Text inventoryText;
+    public DialogueManager dialogueManager;
     private Scavenger scav;
     private int triesLeft;
+    private static readonly string invTitle = "Current Haul:\n";
     private int TriesLeft
     {
         get => triesLeft;
@@ -32,36 +33,29 @@ public class ScavengeManager : MonoBehaviour
     {
         scav = GetComponent<Scavenger>();
         TriesLeft = maxTries;
-        displayText.text = "Click the button to scavenge";
         continueButton.gameObject.SetActive(false);
-        DisplayInventory();
+        inventoryText.text = invTitle;
     }
     public void StartScavenge()
     {
+        var sentences = new List<string>();
         var item = scav.Scavenge(lootTable);
         if (item.partClass == Part.Class.None)
         {
-            displayText.text = "You found: nothing. Better luck next time!";
+            sentences.Add("You found: nothing. Better luck next time!");
         }
         else
         {
             Player.instance.inventory.Add(item);
-            DisplayInventory();
-            displayText.text = "You found: " + item.DisplayName + " x1";
+            inventoryText.text += inventoryText.text == invTitle ? item.DisplayName : ", " + item.DisplayName; 
+            sentences.Add("You found: " + item.DisplayName + " x1");
         }
         if (--TriesLeft <= 0)
         {
             scavengeButton.interactable = false;
             continueButton.gameObject.SetActive(true);         
-            displayText.text += "\n You are out of energy!";
+            sentences.Add("You are out of energy!");
         }
-    }
-
-    private void DisplayInventory()
-    {
-        string invStr = "Inventory:\n";
-        foreach (var item in Player.instance.inventory)
-            invStr += item.DisplayName + ", ";     
-        inventoryText.text = invStr.TrimEnd(' ', ',');
+        dialogueManager.StartDialogue(new Dialogue() { sentences = sentences.ToArray() });
     }
 }

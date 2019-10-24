@@ -7,6 +7,7 @@ public class Quest {
 
     public bool completed = false;
 
+    public int index;
     public string name;
 
     [TextArea(2,10)]

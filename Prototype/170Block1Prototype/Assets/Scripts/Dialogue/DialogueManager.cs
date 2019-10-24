@@ -12,20 +12,23 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;
     public Animator animator;
     public Dialogue dialogue;
+    public bool startOnStart;
 
-    private Queue<string> sentences;
+    private Queue<string> sentences = new Queue<string>();
 
     // Start is called before the first frame update
     void Start()
     {
-        sentences = new Queue<string>();
-        animator.SetBool("IsOpen", true);
-        StartDialogue(dialogue);
+        if(startOnStart)
+            StartDialogue(dialogue);
+        else
+            animator.SetBool("IsOpen", false);
     }
 
     // Starts the dialogue and displays next sentence
     public void StartDialogue(Dialogue dialogue)
     {
+        animator.SetBool("IsOpen", true);
         Debug.Log("Starting Convo");
    
         sentences.Clear();

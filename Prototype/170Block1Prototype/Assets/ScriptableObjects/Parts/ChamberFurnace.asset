@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c212648338482484394fea4f61fcfa97, type: 3}
   m_Name: ChamberFurnace
   m_EditorClassIdentifier: 
-  displayName: Chanber Furnace
+  displayName: Furnace Chamber
   description: A fiery chanber that can be strapped to a robot to allow it to incinerate
     things.
   itemGraphic: {fileID: 0}

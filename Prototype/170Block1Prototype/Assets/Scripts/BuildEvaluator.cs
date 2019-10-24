@@ -5,22 +5,33 @@ using System.Linq;
 
 public class BuildEvaluator : MonoBehaviour
 {
+    public BuildSystem system;
     public DialogueManager manager;
+
+    public void EvaluateBuild()
+    {
+        EvaluateBuild(system.AddPart);
+    }
     public void EvaluateBuild(List<Part> parts)
     {
         Dialogue d;
         int bonus;
-        bool success;
-        switch (Player.instance.currentQuest.name)
+        bool success = false;
+        switch (Player.instance.currentQuest.index)
         {
-            case "First Quest":
+            case 1:
                 success = EvaluateFirstQuest(parts, out bonus, out d);
                 manager.StartDialogue(d);
                 break;
-            case "Second Quest":
+            case 2:
                 success = EvaluateSecondQuest(parts, out bonus, out d);
                 manager.StartDialogue(d);
                 break;
+        }
+        if(success)
+        {
+            Player.instance.currentQuest.completed = true;
+            QuestManger.instance.QuestComplete();
         }
     }
 
